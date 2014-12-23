@@ -8,7 +8,7 @@ task hello2 << {
     println 'Hello World2'
 }
 
-task intro(dependsOn: hello) << {
+task intro(dependsOn: ['hello','hello2']) << {
     println 'This is the power of Gradle'
 }
 
