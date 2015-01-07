@@ -1,3 +1,5 @@
+defaultTasks 'printProp','hello'
+
 task hello {
     doLast {
         println 'Hello World'
