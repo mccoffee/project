@@ -1,5 +1,7 @@
 defaultTasks 'printProp','hello'
 
+apply plugin: 'java'
+
 task hello {
     doLast {
         println 'Hello World'
