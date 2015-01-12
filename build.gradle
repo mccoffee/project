@@ -2,6 +2,10 @@ defaultTasks 'printProp','hello'
 
 apply plugin: 'java'
 
+repositories {
+    mavenCentral();
+}
+
 task hello {
     doLast {
         println 'Hello World'
