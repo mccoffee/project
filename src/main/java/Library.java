@@ -1,5 +1,4 @@
-package java;
-//Todo: Move to appropriate package
+//Todo: Compose main-method with gradle run...
 public class Library {
 
     public boolean someLibraryMethod() {
