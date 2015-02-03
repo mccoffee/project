@@ -1,6 +1,13 @@
 defaultTasks 'printProp','hello'
 
 apply plugin: 'java'
+apply plugin: 'application'
+
+jar{
+    manifest{
+        attributes 'Main-Class': 'HelloWorld'
+    }
+}
 
 repositories {
     mavenCentral();
