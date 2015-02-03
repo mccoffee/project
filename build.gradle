@@ -4,6 +4,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 jar{
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest{
         attributes 'Main-Class': 'HelloWorld'
     }
