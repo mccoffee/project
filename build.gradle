@@ -3,6 +3,13 @@ defaultTasks 'printProp','hello'
 apply plugin: 'java'
 apply plugin: 'application'
 
+// Configuration for application plugin
+mainClassName = 'HelloWorld'
+applicationDefaultJvmArgs = [
+        "-Djava.library.path=lib/lwjgl/native/",
+        "-XstartOnFirstThread" ]
+
+// configuration for jar-task
 jar{
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest{
